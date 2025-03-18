@@ -116,6 +116,11 @@ body {
     color: var(--color-primary);
 }
 
+.ministerio-text {
+    color: #FFD700; /* Amarillo */
+    font-weight: bold; /* Negrita */
+}
+
 .hero {
     display: flex;
     justify-content: space-between;
