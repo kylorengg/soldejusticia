@@ -1,0 +1,393 @@
+:root {
+    --color-primary: #000;
+    --color-secondary: yellow;
+    --color-text: #fff;
+    --font-primary: Arial, sans-serif;
+    --header-height: 60px;
+
+    --color_primario: #8527c3fd;
+    --color_primario_suave: #8527c383;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+.welcome-text {
+    color: #fff;
+}
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--padding_left_right);
+    background: var(--color-primary);
+    height: var(--altura_header);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    left: 0;
+}
+.welcome-text {
+    font-size: 2rem; /* Tamaño base del texto */
+    line-height: 1.6;
+    color: var(--color_blanco); /* Asegúrate de que el texto sea blanco */
+}
+
+.sol-de-justicia {
+    font-size: 2.5rem; /* Tamaño más grande para "Sol de justicia" */
+    font-weight: bold; /* Negrita para resaltar */
+    color: var(--color-secondary); /* Usa el color secundario (amarillo) para destacar */
+    display: inline-block; /* Para que no afecte el flujo del texto */
+}
+
+.bible-verse {
+    font-size: 1.2rem; /* Tamaño más pequeño para el versículo */
+    font-style: italic; /* Cursiva para el versículo */
+    margin-top: 10px; /* Espacio arriba del versículo */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--ancho_maximo);
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.labe_hamburguesa {
+    display: none;
+    cursor: pointer;
+}
+
+.list_icon {
+    fill: var(--color-text);
+}
+
+.menu_hamburguesa {
+    display: none;
+}
+
+.ul_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+.li_links {
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: normal;
+}
+
+.li_links:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.li_links:hover .link {
+    color: var(--color-primary);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('../media/3.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: var(--altura_header);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.527);
+    z-index: 1;
+}
+
+.text {
+    position: relative;
+    z-index: 2;
+}
+
+.text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.text button {
+    padding: 10px 20px;
+    border: none;
+    background: var(--color-secondary);
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.text button:hover {
+    transform: scale(1.1);
+}
+
+.images {
+    display: flex;
+    gap: 5px;
+}
+
+.images img {
+    width: 150px;
+    height: 100px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.images img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px var(--color-secondary);
+    border-radius: 0%;
+}
+
+main {
+    flex: 1;
+    padding-top: calc(var(--altura_header) + 40px); 
+    padding-bottom: 40px;
+}
+
+.text-center h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p.lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: var(--color-primary);
+    padding: 15px 0;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+footer p {
+    color: var(--color-text);
+    margin: 0;
+}
+
+footer a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .labe_hamburguesa {
+        display: block;
+    }
+
+    .ul_links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--altura_header);
+        left: 0;
+        width: 100%;
+        background: var(--color-primary);
+        padding: 10px;
+    }
+
+    .menu_hamburguesa:checked ~ .ul_links {
+        display: flex;
+    }
+
+    .li_links {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .li_links {
+        padding: 5px;
+    }
+
+    .text h1 {
+        font-size: 24px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    .text button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+.radio-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../media/3.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.radio-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(251, 255, 0);
+}
+
+.radio-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+audio
+{
+width: 100%;-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006773;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+}
+audio:hover, audio:focus, audio:active
+{
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+.whatsapp-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.whatsapp-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-number {
+    font-size: 18px;
+    margin: 0;
+    color: green;
+    font-weight: bold;
+}
+
+.whatsapp-number a {
+    text-decoration: none; 
+    color: black;
+}
