@@ -480,6 +480,24 @@ body {
 .text button:hover {
     transform: scale(1.1);
 }
+/* Ajustes para el contenedor de video con Bootstrap */
+.video-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .video-container {
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+    
+    .ratio.ratio-16x9 {
+        margin: 0 auto;
+    }
+}
 
 .images {
     display: flex;
