@@ -42,29 +42,41 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <div class="text">
-            <h1 class="welcome-text">
-                Mas a vosotros los que teméis mi nombre, nacerá <span class="sol-de-justicia">el Sol de justicia</span>
-                <p class="bible-verse">Malaquías 4:2</p>
-            </h1>
-            <a href="./pages/radio.html"><button class="en-vivo">EN VIVO</button></a>
+
+    <main class="container-main">
+        <!-- Sección Hero -->
+        <section class="hero">
+            <div class="text">
+                <h1 class="welcome-text">
+                    Mas a vosotros los que teméis mi nombre, nacerá <span class="sol-de-justicia">el Sol de justicia</span>
+                    <p class="bible-verse">Malaquías 4:2</p>
+                </h1>
+                <a href="./pages/radio.html"><button class="en-vivo">EN VIVO</button></a>
+            </div>
+            <div class="images">
+                <img src="./media/evento.jpg" alt="Evento 1">
+                <img src="./media/evento2.jpg" alt="Evento 2">
+            </div>
+        </section>
+
+        <!-- Sección Video - ahora en una sección separada -->
+        <section class="video-section">
+            <div class="container">
+                <h2 class="section-title">Nuestro contenido</h2>
+                <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D74rF3aaEiI?si=ucOD4A4NCWrY5Ul0" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sol de Justicia. Todos los derechos reservados.</p>
         </div>
-        <div class="images">
-            <img src="./media/evento.jpg" alt="Evento 1">
-            <img src="./media/evento2.jpg" alt="Evento 2">
-        </div>
-<!-- Reemplaza tu sección actual del video con esta -->
-<section class="video-container">
-    <div class="video-responsive">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/D74rF3aaEiI?si=ucOD4A4NCWrY5Ul0" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-</section>
-    <footer>
-        <p>&copy; 2025 Sol de Justicia. Todos los derechos reservados.</p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

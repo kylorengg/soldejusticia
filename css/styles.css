@@ -1,496 +1,238 @@
 :root {
+    /* Colores */
     --color-primary: #000;
-    --color-secondary: yellow;
+    --color-secondary: #ffcc00;
     --color-text: #fff;
-    --font-primary: Arial, sans-serif;
-    --header-height: 60px;
-
-    --color_primario: #8527c3fd;
-    --color_primario_suave: #8527c383;
-    --color_blanco: #fff;
-    --altura_header: 80px;
-    --padding_left_right: 2rem;
-    --ancho_maximo: 1200px;
-}
-.welcome-text {
-    color: #fff;
-}
-/* Banner Full Width */
-.banner-container {
-    width: 100%;
-    height: 100vh; /* Altura del banner */
-    min-height: 800px; /* Altura mínima para móviles */
-    background: url('../media/carlosorono/10.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    --color-background: #000;
+    --color-highlight: #8527c3;
+    --color-highlight-light: rgba(133, 39, 195, 0.51);
+    
+    /* Tipografía */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: Arial, sans-serif;
+    
+    /* Dimensiones */
+    --header-height: 80px;
+    --max-width: 1200px;
+    --padding-container: 2rem;
+    
+    /* Efectos */
+    --transition-fast: 0.2s;
+    --transition-medium: 0.3s;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --box-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Oscurece la imagen para mejor legibilidad */
-}
-
-.banner-text {
-    color: rgb(255, 255, 255);
-    font-size: 4rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    position: relative; /* Para que aparezca sobre el overlay */
-    text-transform: uppercase;
-}
-
-/* Contenido Principal */
-.main-content {
-    background-color: #000000;
-    border-radius: 8px;
-    padding: 2rem;
-}
-
-/* Estilos generales */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset y estilos base */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-/* Estilos del header (manteniendo los que ya tenías) */
-.header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* Estilos del menú hamburguesa (manteniendo los que ya tenías) */
-.labe_hamburguesa, .menu_hamburguesa {
-    display: none;
-}
-
-.ul_links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.li_links {
-    margin-left: 1.5rem;
-}
-
-.link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.link:hover {
-    color: #f39c12;
-}
-
-.link.active {
-    color: #f39c12;
-    border-bottom: 2px solid #f39c12;
-}
-/* Sección de Contacto - Modificaciones específicas */
-.contacto-container {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Elimina el margen superior del main que podría estar causando espacio */
-main {
-    padding-top: 0 !important; /* Elimina cualquier padding-top que pudiera tener */
-}
-
-/* Ajustes para el hero de contacto */
-.contacto-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../media/evento2.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-    margin: 0; /* Elimina cualquier margen */
-    width: 100%;
-    margin-top: var(--altura_header); /* Ajusta según la altura de tu header */
-}
-
-/* Asegúrate que el contenedor principal no tenga padding */
-.contacto-container {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-.contacto-info {
-    padding: 2rem 0;
-    background-color: #ffffff;
-}
-
-.contacto-card {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%;
-    border: 1px solid #e0e0e0;
-}
-
-.contacto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.contacto-card h2 {
-    color: #000000;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-}
-
-.contacto-card h2 i {
-    margin-right: 10px;
-    color: #000000;
-}
-
-.contacto-card p, .contacto-card a {
-    color: #000000;
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-.contacto-card a:hover {
-    color: #000000;
-    text-decoration: underline;
-}
-
-.contacto-formulario {
-    padding: 2rem 0;
-    background-color: #ffffff;
-}
-
-.form-container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e0e0e0;
-}
-
-.form-container h2 {
-    color: #000000;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.whatsapp-directo {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e0e0e0;
-}
-
-.whatsapp-directo h3 {
-    color: #000000;
-    margin-bottom: 1.5rem;
-}
-
-.whatsapp-directo p {
-    color: #000000;
-}
-
-.btn-primary {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-}
-
-.btn-secondary {
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
-}
-
-.btn-whatsapp {
-    background-color: #25D366;
-    color: #000000;
-}
-
-.btn-whatsapp:hover {
-    background-color: #128C7E;
-    color: #ffffff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-    
-    .labe_hamburguesa {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        cursor: pointer;
-    }
-    
-    .menu_hamburguesa {
-        display: none;
-    }
-    
-    .ul_links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-    
-    .li_links {
-        margin: 0;
-        padding: 0.5rem 0;
-    }
-    
-    .menu_hamburguesa:checked ~ .ul_links {
-        display: flex;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .contacto-card {
-        padding: 1rem;
-    }
-    
-    .btn-whatsapp {
-        display: block;
-        width: 100%;
-        margin: 0.5rem 0;
-    }
-}
-
-/* Carrusel */
-.photo-carousel {
-    margin-top: 3rem;
-}
-
-.carousel-item img {
-    max-height: 500px;
-    object-fit: cover;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .banner-text {
-        font-size: 2.5rem;
-    }
-    
-    .banner-container {
-        height: 50vh;
-    }
-}
 body {
     font-family: var(--font-primary);
-    margin: 0;
-    padding: 0;
     color: var(--color-text);
-    background-color: var(--color-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Estructura principal */
+.container-main {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--padding-container);
+    flex: 1;
+    padding-top: calc(var(--header-height) + 20px);
+}
+
+/* Header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--padding_left_right);
-    background: var(--color-primary);
-    height: var(--altura_header);
+    background-color: var(--color-primary);
+    height: var(--header-height);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-sizing: border-box;
-    left: 0;
-}
-.welcome-text {
-    font-size: 2rem; /* Tamaño base del texto */
-    line-height: 1.6;
-    color: var(--color_blanco); /* Asegúrate de que el texto sea blanco */
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
 }
 
-.sol-de-justicia {
-    font-size: 2.5rem; /* Tamaño más grande para "Sol de justicia" */
-    font-weight: bold; /* Negrita para resaltar */
-    color: var(--color-secondary); /* Usa el color secundario (amarillo) para destacar */
-    display: inline-block; /* Para que no afecte el flujo del texto */
-}
-
-.bible-verse {
-    font-size: 1.2rem; /* Tamaño más pequeño para el versículo */
-    font-style: italic; /* Cursiva para el versículo */
-    margin-top: 10px; /* Espacio arriba del versículo */
-}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: var(--ancho_maximo);
-    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 0 var(--padding-container);
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 1.8rem;
     font-weight: bold;
     color: var(--color-text);
+    text-transform: uppercase;
 }
 
-.labe_hamburguesa {
+/* Menú de navegación */
+.ul_links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.link:hover {
+    color: var(--color-secondary);
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width var(--transition-medium);
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+/* Menú hamburguesa (mobile) */
+.labe_hamburguesa, .menu_hamburguesa {
     display: none;
-    cursor: pointer;
 }
 
 .list_icon {
     fill: var(--color-text);
+    transition: transform var(--transition-medium);
 }
 
-.menu_hamburguesa {
-    display: none;
-}
-
-.ul_links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-    flex-wrap: nowrap;
-}
-
-.li_links {
-    padding: 10px;
-    transition: background 0.3s;
-}
-
-.link {
-    text-decoration: none;
-    color: var(--color-text);
-    font-weight: normal;
-}
-
-.li_links:hover {
-    background: var(--color-secondary);
-    color: var(--color-primary);
-}
-
-.li_links:hover .link {
-    color: var(--color-primary);
-}
-
-.ministerio-text {
-    color: #FFD700; /* Amarillo */
-    font-weight: bold; /* Negrita */
-}
-
+/* Hero section */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    background: url('../media/3.jpg') no-repeat center center;
+    gap: 2rem;
+    min-height: calc(100vh - var(--header-height));
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../media/3.jpg') no-repeat center center;
     background-size: cover;
-    min-height: 100vh;
-    margin-top: var(--altura_header);
     position: relative;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.527);
-    z-index: 1;
-}
-
-.text {
+.hero-content {
+    flex: 1;
     position: relative;
     z-index: 2;
 }
 
-.text h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.welcome-text {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
 }
 
-.text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.text button {
-    padding: 10px 20px;
-    border: none;
-    background: var(--color-secondary);
-    cursor: pointer;
-    transition: transform 0.3s;
-    color: var(--color-primary);
+.sol-de-justicia {
+    color: var(--color-secondary);
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.text button:hover {
+.bible-verse {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.en-vivo {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    text-transform: uppercase;
+}
+
+.en-vivo:hover {
+    background-color: var(--color-text);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.hero-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-images img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    box-shadow: var(--box-shadow);
+}
+
+.hero-images img:hover {
     transform: scale(1.1);
-}
-/* Estilos para el contenedor del video de YouTube */
-.video-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    box-shadow: var(--box-shadow-hover);
+    z-index: 3;
 }
 
-/* Ratio responsivo para el video */
+/* Video section */
+.video-section {
+    margin: 4rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-hover);
+}
+
 .video-responsive {
     position: relative;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
 }
@@ -504,245 +246,170 @@ body {
     border: none;
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-    .video-container {
-        padding: 10px;
-    }
-    
-    /* Asegurar que el video no sea demasiado ancho en móviles */
-    .video-responsive {
-        margin: 0 auto;
-        max-width: 100%;
-    }
-}
-
-/* Opcional: Estilos para mejorar la integración con Bootstrap */
-.ratio.ratio-16x9 {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.images {
-    display: flex;
-    gap: 5px;
-}
-
-.images img {
-    width: 150px;
-    height: 100px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    z-index: 2;
-}
-
-.images img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 5px var(--color-secondary);
-    border-radius: 0%;
-}
-
-main {
-    flex: 1;
-    padding-top: calc(var(--altura_header) + 40px); 
-    padding-bottom: 40px;
-}
-
-.text-center h1 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-p.lead {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-img {
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer {
+/* Footer */
+.footer {
     background-color: var(--color-primary);
-    padding: 15px 0;
-    font-size: 14px;
+    color: var(--color-text);
     text-align: center;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 1.5rem;
     margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-footer p {
-    color: var(--color-text);
+.footer p {
     margin: 0;
+    font-size: 0.9rem;
 }
 
-footer a {
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: var(--color-secondary);
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .header {
-        padding: 0 10px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .labe_hamburguesa {
-        display: block;
-    }
-
-    .ul_links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: var(--altura_header);
-        left: 0;
-        width: 100%;
-        background: var(--color-primary);
-        padding: 10px;
-    }
-
-    .menu_hamburguesa:checked ~ .ul_links {
-        display: flex;
-    }
-
-    .li_links {
-        padding: 10px;
-        text-align: center;
-    }
-
+/* Estilos responsive */
+@media (max-width: 992px) {
     .hero {
         flex-direction: column;
-        padding: 20px;
         text-align: center;
     }
-
-    .text h1 {
-        font-size: 28px;
+    
+    .hero-images {
+        margin-top: 2rem;
     }
+}
 
-    .text p {
-        font-size: 16px;
+@media (max-width: 768px) {
+    :root {
+        --padding-container: 1rem;
     }
-
-    .images {
+    
+    /* Menú hamburguesa */
+    .labe_hamburguesa {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .ul_links {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
         flex-direction: column;
         align-items: center;
+        padding: 1rem 0;
+        gap: 0;
+        clip-path: circle(0px at 90% -10%);
+        transition: clip-path var(--transition-medium);
     }
-
-    .images img {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
+    
+    .menu_hamburguesa:checked ~ .ul_links {
+        clip-path: circle(1000px at 90% -10%);
     }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 18px;
-    }
-
+    
     .li_links {
-        padding: 5px;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 0;
     }
-
-    .text h1 {
-        font-size: 24px;
+    
+    .link {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
     }
-
-    .text p {
-        font-size: 14px;
+    
+    /* Hero adjustments */
+    .hero {
+        padding: 1.5rem;
     }
-
-    .text button {
-        padding: 8px 16px;
-        font-size: 14px;
+    
+    .welcome-text {
+        font-size: 2rem;
     }
 }
 
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .hero-images img {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .video-section {
+        margin: 2rem 0;
+        padding: 1.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos específicos para el reproductor de radio */
 .radio-player {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url(../media/3.jpg); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    min-height: calc(100vh - var(--header-height));
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../media/3.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 2rem;
 }
 
 .radio-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(251, 255, 0);
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
 }
 
 .radio-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
 }
 
+/* Estilos para el elemento audio */
 audio {
     width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
+    margin: 1.5rem 0;
+    border-radius: 50px;
+    transition: all var(--transition-medium);
 }
 
-audio
-{
-width: 100%;-webkit-transition:all 0.5s linear;
--moz-transition:all 0.5s linear;
--o-transition:all 0.5s linear;
-transition:all 0.5s linear;
--moz-box-shadow: 2px 2px 4px 0px #006773;
--webkit-box-shadow:  2px 2px 4px 0px #006773;
-box-shadow: 2px 2px 4px 0px #006773;
--moz-border-radius:7px 7px 7px 7px ;
--webkit-border-radius:7px 7px 7px 7px ;
-border-radius:7px 7px 7px 7px ;
-}
-audio:hover, audio:focus, audio:active
-{
--webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--webkit-transform: scale(1.05);
--moz-transform: scale(1.05);
-transform: scale(1.05);
+audio:hover, audio:focus {
+    box-shadow: 0 0 15px var(--color-secondary);
+    transform: scale(1.02);
 }
 
+/* Estilos para WhatsApp */
 .whatsapp-info {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.8rem;
+    margin-top: 1rem;
 }
 
 .whatsapp-logo {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 }
 
 .whatsapp-number {
-    font-size: 18px;
-    margin: 0;
-    color: green;
-    font-weight: bold;
+    font-size: 1rem;
+    color: var(--color-text);
 }
 
 .whatsapp-number a {
-    text-decoration: none; 
-    color: black;
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.whatsapp-number a:hover {
+    color: var(--color-text);
+    text-decoration: underline;
 }
