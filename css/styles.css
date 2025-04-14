@@ -480,23 +480,47 @@ body {
 .text button:hover {
     transform: scale(1.1);
 }
-/* Ajustes para el contenedor de video con Bootstrap */
+/* Estilos para el contenedor del video de YouTube */
 .video-container {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 15px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Ajustes para móviles */
+/* Ratio responsivo para el video */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
     .video-container {
-        margin: 10px auto;
-        padding: 0 10px;
+        padding: 10px;
     }
     
-    .ratio.ratio-16x9 {
+    /* Asegurar que el video no sea demasiado ancho en móviles */
+    .video-responsive {
         margin: 0 auto;
+        max-width: 100%;
     }
+}
+
+/* Opcional: Estilos para mejorar la integración con Bootstrap */
+.ratio.ratio-16x9 {
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .images {
