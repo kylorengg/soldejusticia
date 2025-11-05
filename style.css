@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('fondo.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.player-container {
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  width: 320px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.player-header {
+  background: linear-gradient(90deg, lab(0% 0 0), hsla(56, 100%, 50%, 0.767));
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-body {
+  padding: 20px;
+  background: #ffffff;
+  color: white;
+}
+
+.player-body audio {
+  width: 100%;
+  outline: none;
+}
+
+.player-footer {
+  padding: 10px;
+  background: #ffffff;
+  font-size: 14px;
+}
+
+.icons img {
+  width: 24px;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.icons img:hover {
+  opacity: 1;
+}
